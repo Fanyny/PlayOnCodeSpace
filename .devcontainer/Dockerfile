@@ -5,12 +5,12 @@ FROM mcr.microsoft.com/devcontainers/base:bookworm
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends postgresql postgresql-contrib
 
-# 2. SUDO FIX: Ensure the 'vscode' user can use sudo without a password
+# 2. SUDO : Ensure the 'vscode' user can use sudo without a password
 # This prevents the "[sudo] password for vscode" error during startup
 RUN echo "vscode ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/vscode \
     && chmod 0440 /etc/sudoers.d/vscode
 
-# 3. AUTH FIX: Configure Postgres to allow local connections ('trust' mode)
+# 3. AUTH : Configure Postgres to allow local connections ('trust' mode)
 # This uses a wildcard (*) so it works for version 15, 16, etc. automatically.
 # It replaces 'peer' (system user) auth with 'trust' (no password for local)
 # or 'md5' (password allowed).

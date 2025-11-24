@@ -10,7 +10,6 @@
       ]
     }
   },
-  // Now that permissions are fixed, this command will run immediately 
-  // without asking for a password.
+  // this command will run immediately without asking for a password.
   "postStartCommand": "sudo service postgresql start"
 }
