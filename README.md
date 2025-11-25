@@ -9,9 +9,9 @@
 
 -----------------
 
-> [WARNING]
+> [!WARNING]
 > On installe un *environnement virtuel pour python* pour run les ipynb !
-> ```bash
+>   ```bash
 >   sudo apt-get update
 >   sudo apt-get install -y python3.11-venv
 >   source venv/bin/activate
