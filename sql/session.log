@@ -1,0 +1,25 @@
+********* QUERY **********
+CREATE table test (id int);
+**************************
+
+CREATE TABLE
+********* QUERY **********
+insert into values(3),(4),(10);
+**************************
+
+********* QUERY **********
+insert into test values(3),(4),(10);
+**************************
+
+INSERT 0 3
+********* QUERY **********
+select * from test;
+**************************
+
+ id 
+----
+  3
+  4
+ 10
+(3 rows)
+
