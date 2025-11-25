@@ -11,5 +11,7 @@
     }
   },
   // this command will run immediately without asking for a password.
-  "postStartCommand": "sudo service postgresql start"
+  "postStartCommand": "sudo service postgresql start",
+  // Add the source command to .bashrc ONCE during creation of the container
+  "postCreateCommand": "echo 'source $PWD/venv/bin/activate' >> ~/.bashrc"
 }
