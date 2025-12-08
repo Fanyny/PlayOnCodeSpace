@@ -10,4 +10,14 @@ sudo -i -u postgres psql
 sudo -i -u postgres psql -a -L /tmp/session.log
 ```
 
-- Si on veut enregistrer la console
+- Si on veut enregistrer la console, on utilise la commande bash `script`
+```bash
+# on lance l'enregistrement vers le fichier session.log
+script /tmp/session.log
+# puis on lance la shell psql avec un echo all (-a)
+sudo -i -u postgres psql -a
+# on stoppe l'enregistrement
+exit
+```
+
+- On peut aussi faire un casr avec asciinema
