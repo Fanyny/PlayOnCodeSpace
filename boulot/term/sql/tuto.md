@@ -20,4 +20,4 @@ sudo -i -u postgres psql -a
 exit
 ```
 
-- On peut aussi faire un cast avec asciinema
+- On peut aussi faire un cast avec [asciinema](../asciinema/tuto.md)
